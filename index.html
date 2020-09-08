@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+
+
+
+
+<body>
+  <header>
+        <nav>
+            <a href=""><h1 id="logo">k&B</h1></a>
+            <img class="toggle" src="toggle.png" alt="toggle">
+        </nav>
+        <section>
+            <div class="content">
+                <img src="img1.jpg" alt="">
+                <h1 class="headline">believe in <span>Yourself</span></h2>
+            </div>
+        </section>
+    </header>
+    <div class="slider"></div>
+
+
+
+  <div class="main">
+    <div class="container" >
+      <!-- Swiper -->
+      <div class="swiper-container" data-aos="zoom-in"
+        data-aos-offset="100"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image:url(img2.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(img3.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(img4.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(img5.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(img2.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(img3.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(img4.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(img5.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(img3.jpg)"></div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  <div class="pub1">
+    <div class=" first" >
+      
+      <div class="image" data-aos="fade-left">
+        <img src="img3.jpg" alt="" >
+      </div>
+    </div>
+
+      <div class="text" >
+        <h2 id="title" data-aos="fade-right">Don't tell me what you think that i can be</h2>
+      </div>
+  </div>
+
+  <div class="pub1">
+    <div class="first white" >
+      
+      <div class="image image2" data-aos="fade-right">
+        <img src="img5.jpg" alt="" >
+      </div>
+    </div>
+
+      <div class="text text2" >
+        <h2 id="title" data-aos="fade-left">I'm the one at the sail, I'm the master of my sea </h2>
+      </div>
+  </div>
+    
+      <footer>
+        <div class="touch">
+          <h2>get in touch</h2>
+          <div id="email">
+          <h1>ilyassboumour@gmail.com</h1>
+        </div>
+          <div class="social-menu">
+        <ul>
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+          <!-- <li><a href=""><i class="fa fa-twitter"></i></a></li> -->
+          <li><a href=""><i class="fa fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa fa-youtube"></i></a></li>
+          <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <p>I&B © 2020, All RIghts Reserved</p>
+        </div>
+    </footer>
+    </div>
+    
+  </div>
+
+
+
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="../package/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    // console.log(document.width());
+    if(document.body.clientWidth<=935 ){
+      var swiper = new Swiper('.swiper-container', {
+      effect: 'cube',
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+    }
+    else{
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 40,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+
+    });
+    }
+  </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
